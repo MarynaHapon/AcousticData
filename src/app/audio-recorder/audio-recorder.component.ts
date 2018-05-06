@@ -47,11 +47,4 @@ export class AudioRecorderComponent implements OnInit {
       console.log(this.window.nativeWindow['audio_data']);
     }, 500);
   }
-
-  // select spectrogram
-  public play() {
-    init('btn-microphone', 'btn-song', 'select-song');
-    requestMic();
-  }
-
 }

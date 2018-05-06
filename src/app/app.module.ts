@@ -34,6 +34,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrogram.component';
 import { StaticSpectrogramPageComponent } from './static-spectrogram-page/static-spectrogram-page.component';
+import { RealTimeSpectrogramPageComponent } from './real-time-spectrogram-page/real-time-spectrogram-page.component';
+import { RealTimeSpectrogramComponent } from './real-time-spectrogram/real-time-spectrogram.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent },
@@ -50,7 +52,9 @@ import { StaticSpectrogramPageComponent } from './static-spectrogram-page/static
     HomeComponent,
     AboutComponent,
     StaticSpectrogramComponent,
-    StaticSpectrogramPageComponent
+    StaticSpectrogramPageComponent,
+    RealTimeSpectrogramPageComponent,
+    RealTimeSpectrogramComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

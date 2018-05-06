@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Спектрограма</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-subtitle>Режим реального часу</mat-card-subtitle>
+
+  <mat-card-content>
+    <canvas id="canvas"></canvas>
+
+    <div>
+      <button mat-icon-button color="accent" (click)="play()" id="btn-microphone">
+        <mat-icon>power_settings_new</mat-icon>
+      </button>
+
+      <select id="select-song">
+        <option value="1">Ethos - Final Hope</option>
+        <option value="0">Aphex Twins - Equation</option>
+      </select>
+
+      <button id="btn-song" >Play song</button>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -61,6 +61,8 @@ app-home,
 app-audio-recorder,
 app-about,
 app-static-spectrogram,
-app-static-spectrogram-page {
+app-real-time-spectrogram,
+app-static-spectrogram-page,
+app-real-time-spectrogram-page {
   width: 100%;
 }

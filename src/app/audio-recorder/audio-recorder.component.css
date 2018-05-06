@@ -6,8 +6,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-#canvas {
-  position: relative;
-  width: 100%;
-}
