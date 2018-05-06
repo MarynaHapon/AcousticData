@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="columns is-centered">
+
+    <div class="column is-3">
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Грає: {{ currentTrack.name }}
+            </mat-panel-title>
+            <mat-panel-description>
+              Трек: {{ currentTrack.id + 1}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div>
+            <mat-nav-list *ngFor="let track of tracks">
+              <a mat-list-item
+                 [class.selected]="track === currentTrack"
+                 (click)="setTrack(track);">{{ track.name }}</a>
+            </mat-nav-list>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Програвач</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div id="sliders">
+            <div class="space-between">
+              <span>Гучність:</span>
+              <mat-slider
+                min="0"
+                max="1"
+                step="0.001"
+                value="{{ audio.volume }}"
+                (change)="setVolume($event.value)">
+              </mat-slider>
+            </div>
+            <div class="space-between">
+              <span>Прогрес:</span>
+              <mat-slider
+                min="0"
+                max="{{ audio.duration }}"
+                step="0.001"
+                value="{{ audio.currentTime }}"
+                (change)="setProgress($event.value)">
+              </mat-slider>
+            </div>
+          </div>
+        </mat-card-content>
+
+
+        <mat-card-actions class="btn-group">
+          <button mat-icon-button id="previous" (click)="previousTrack()">
+            <mat-icon aria-label="Example icon-button with a heart icon">chevron_left</mat-icon>
+          </button>
+          <mat-button-toggle-group>
+            <mat-button-toggle color="accent" id="play" (click)="playTrack()">
+              <mat-icon>play_arrow</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle color="accent" id="pause" (click)="pauseTrack()">
+              <mat-icon>pause</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle color="warn" id="stop" (click)="stopTrack()">
+              <mat-icon>stop</mat-icon>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+          <button mat-icon-button id="next" (click)="nextTrack()">
+            <mat-icon aria-label="Example icon-button with a heart icon">chevron_right</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+
+    <div class="column is-9">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Спектрограма</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-subtitle class="space-between">
+          <mat-form-field>
+            <mat-select placeholder="Обрати трек">
+              <mat-option *ngFor="let track of tracks"
+                          [value]="track.name"
+                          (click)="buildSpectrogram(track.url);">
+                {{ track.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" id="vis_button"></button>
+        </mat-card-subtitle>
+
+
+        <mat-card-content>
+          <div id="vis" class="spectrogram"></div>
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+
+  </div>
+</div>

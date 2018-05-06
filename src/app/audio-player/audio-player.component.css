@@ -1,0 +1,35 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.columns {
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group-center {
+  display: flex;
+  justify-content: space-around;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-slider-horizontal {
+  width: 220px;
+}
+
+#sliders span {
+  line-height: 48px;
+}
+
+.spectrogram {
+  height: 302px;
+  overflow-x: hidden;
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "0",
+    "name": "t1",
+    "url": "src/assets/audio/01.wav"
+  },
+  {
+    "id": "1",
+    "name": "t2",
+    "url": "src/assets/audio/02.wav"
+  },
+  {
+    "id": "2",
+    "name": "t3",
+    "url": "src/assets/audio/03.wav"
+  }
+]

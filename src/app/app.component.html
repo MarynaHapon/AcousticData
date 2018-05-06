@@ -1,0 +1,50 @@
+<section class="hero is-fullheight is-default is-bold">
+
+  <mat-toolbar color="primary" class="hero-head box-shadow">
+    <mat-toolbar-row>
+      <button mat-icon-button color="accent" >
+        <mat-icon routerLink="/home" aria-label="Example icon-button with a heart icon">play_circle_outline</mat-icon>
+      </button>
+      <span>Система збору акустичної інформації</span>
+      <span class="spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="is-right">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button routerLink="/home" mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span>Головна</span>
+        </button>
+        <button routerLink="/audio-recorder" mat-menu-item>
+          <mat-icon>mic</mat-icon>
+          <span>Аудіо запис</span>
+        </button>
+        <button routerLink="/audio-player" mat-menu-item>
+          <mat-icon>hearing</mat-icon>
+          <span>Аудіо відтворення</span>
+        </button>
+        <button routerLink="/about" mat-menu-item>
+          <mat-icon>people</mat-icon>
+          <span>Про нас</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="hero-body">
+      <router-outlet></router-outlet>
+  </div>
+
+  <mat-toolbar color="primary" class="hero-head box-shadow">
+    <mat-toolbar-row>
+      <div class="hero-foot">
+        <mat-chip-list>
+          <mat-chip color="accent" selected="true">Гапон М.В.</mat-chip>
+          <mat-chip color="accent" selected="true">ВА-61м</mat-chip>
+          <mat-chip color="accent" selected="true">КПІ "АЕД"</mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</section>

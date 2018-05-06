@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="columns is-centered">
+
+    <div class="column is-4">
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Аудіо запис</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div class="home_btn btn-group">
+            <button (click)="start(this);" mat-raised-button color="primary">
+              <mat-icon>mic</mat-icon>
+              Почати запис
+            </button>
+            <button (click)="stop(this)" mat-raised-button color="warn">
+              <mat-icon>mic_off</mat-icon>
+              Зупинити запис
+            </button>
+          </div>
+        </mat-card-content>
+
+        <mat-card-content>
+          <div class="modal-dialog" (click)="stop()" *ngIf="isListening">
+            <img src="../../../assets/cassette-tape-1.gif" class="center"/>
+          </div>
+        </mat-card-content>
+
+
+        <mat-card-header>
+          <mat-card-title>Список</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <ul id="recordingslist" class="well"></ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="column is-8">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Спектрограма</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-subtitle>Режим реального часу</mat-card-subtitle>
+
+        <mat-card-content>
+          <canvas id="canvas"></canvas>
+
+          <div>
+            <button mat-icon-button color="accent" (click)="play()" id="btn-microphone">
+              <mat-icon>power_settings_new</mat-icon>
+            </button>
+
+            <select id="select-song">
+              <option value="1">Ethos - Final Hope</option>
+              <option value="0">Aphex Twins - Equation</option>
+            </select>
+
+            <button id="btn-song" >Play song</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+</div>

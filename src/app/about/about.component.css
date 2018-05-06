@@ -1,0 +1,23 @@
+.card {
+  text-align: justify;
+}
+
+.card + .card {
+  margin: 20px 0 0 0;
+}
+
+.header-image {
+  background-size: cover;
+}
+
+.chief {
+  background-image: url('http://aed.kpi.ua/files/538c3a430326935e44a33ef0596b51dbcf6cc580.jpg');
+}
+
+.student {
+  background-image: url('https://sun9-2.userapi.com/c840529/v840529373/60059/DQU3Luwn9f0.jpg');
+}
+
+.aed {
+  background-image: url('http://aed.kpi.ua/template/img/logo.png');
+}

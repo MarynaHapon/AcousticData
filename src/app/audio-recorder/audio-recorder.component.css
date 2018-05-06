@@ -1,0 +1,13 @@
+.columns {
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+#canvas {
+  position: relative;
+  width: 100%;
+}
