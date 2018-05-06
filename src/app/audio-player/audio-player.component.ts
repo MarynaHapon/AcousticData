@@ -1,11 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AudioTrack } from './audio-track';
-import { trackList } from './audio-tracks';
+import { AudioTrack } from '../audio-track';
+import { trackList } from '../audio-tracks';
 import { AudioPlayerService } from './audio-player.service';
-
-declare function StaticSpectrogram(filename, selector, options): void;
-declare function buildStaticSpectrogram(filename, selector, options): void;
-declare function deleteStaticSpectrogram(): void;
 
 
 @Component({
@@ -88,14 +84,6 @@ export class AudioPlayerComponent implements OnInit, OnDestroy {
 
   setProgress(prog) {
     this.audio.currentTime = prog;
-  }
-
-  public buildSpectrogram(audio) {
-    buildStaticSpectrogram(audio, '#vis', {width: 710, height: 200, maxFrequency: 22000, sampleRate: 44100});
-  }
-
-  public del() {
-    deleteStaticSpectrogram();
   }
 
   ngOnDestroy() {

@@ -79,31 +79,7 @@
 
 
     <div class="column is-9">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Спектрограма</mat-card-title>
-        </mat-card-header>
-
-        <mat-card-subtitle class="space-between">
-          <mat-form-field>
-            <mat-select placeholder="Обрати трек">
-              <mat-option *ngFor="let track of tracks"
-                          [value]="track.name"
-                          (click)="buildSpectrogram(track.url);">
-                {{ track.name }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-
-          <button mat-raised-button color="primary" id="vis_button"></button>
-        </mat-card-subtitle>
-
-
-        <mat-card-content>
-          <div id="vis" class="spectrogram"></div>
-        </mat-card-content>
-
-      </mat-card>
+      <app-static-spectrogram></app-static-spectrogram>
     </div>
 
   </div>

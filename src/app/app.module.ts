@@ -32,6 +32,7 @@ import { WindowRef } from './audio-recorder/window.service';
 import { AudioPlayerService } from './audio-player/audio-player.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrogram.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent },
@@ -46,7 +47,8 @@ import { AboutComponent } from './about/about.component';
     AudioPlayerComponent,
     AudioRecorderComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    StaticSpectrogramComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
