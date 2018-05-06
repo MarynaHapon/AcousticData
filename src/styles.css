@@ -59,6 +59,8 @@ table {
 app-audio-player,
 app-home,
 app-audio-recorder,
-app-about {
+app-about,
+app-static-spectrogram,
+app-static-spectrogram-page {
   width: 100%;
 }

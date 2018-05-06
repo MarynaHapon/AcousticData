@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AudioPlayerComponent } from './audio-player/audio-player.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AudioRecorderComponent } from './audio-recorder/audio-recorder.component';
+
+import { StaticSpectrogramPageComponent } from './static-spectrogram-page/static-spectrogram-page.component'
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'audio-player',
-    component: AudioPlayerComponent
+    component: StaticSpectrogramPageComponent
   },
   {
     path: 'audio-recorder',

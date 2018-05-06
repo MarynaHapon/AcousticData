@@ -33,6 +33,7 @@ import { AudioPlayerService } from './audio-player/audio-player.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrogram.component';
+import { StaticSpectrogramPageComponent } from './static-spectrogram-page/static-spectrogram-page.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent },
@@ -48,7 +49,8 @@ import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrog
     AudioRecorderComponent,
     HomeComponent,
     AboutComponent,
-    StaticSpectrogramComponent
+    StaticSpectrogramComponent,
+    StaticSpectrogramPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
