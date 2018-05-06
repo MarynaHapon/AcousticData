@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AudioTrack } from '../audio-track';
-import { trackList } from '../audio-tracks';
-import { AudioPlayerService } from './audio-player.service';
+import { TrackService } from '../track.service';
 
 
 @Component({
@@ -11,13 +10,15 @@ import { AudioPlayerService } from './audio-player.service';
 })
 
 export class AudioPlayerComponent implements OnInit, OnDestroy {
-  constructor() {
+  tracks: AudioTrack[];
+
+  constructor( private trackService: TrackService ) {
     this.trackIndex = 0;
-    this.currentTrack = this.tracks[this.trackIndex];
+    // this.currentTrack = this.tracks[this.trackIndex];
   }
   public audio: any = null;
   public playing = false;
-  public tracks: AudioTrack[] = trackList;
+  // public tracks: AudioTrack[] = trackList;
   public currentTrack: AudioTrack;
   public trackIndex = 0;
   public list;
@@ -26,7 +27,13 @@ export class AudioPlayerComponent implements OnInit, OnDestroy {
   public selected;
 
   ngOnInit() {
+    this.getTracks();
     this.audio = new Audio();
+  }
+
+  getTracks(): void {
+    this.trackService.getTracks()
+      .subscribe(tracks => this.tracks = tracks);
   }
 
   playTrack() {

@@ -5,16 +5,11 @@ import { of } from 'rxjs/observable/of';
 
 import { AudioTrack } from './audio-track';
 import { TRACKS } from './audio-tracks';
-
 import { LoggerService } from './logger.service';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TrackService {
-  // private trackList: AudioTrack[] = TRACKS;
-
   constructor( private logger: LoggerService ) { }
 
   getTracks(): Observable<AudioTrack[]> {

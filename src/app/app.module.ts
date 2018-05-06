@@ -29,7 +29,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { AudioRecorderComponent } from './audio-recorder/audio-recorder.component';
 import { WindowRef } from './audio-recorder/window.service';
 
-import { AudioPlayerService } from './audio-player/audio-player.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrogram.component';
@@ -84,7 +83,6 @@ import { TrackService } from './track.service';
     AudioPlayerComponent,
     HomeComponent,
     WindowRef,
-    AudioPlayerService,
     LoggerService,
     TrackService
   ],

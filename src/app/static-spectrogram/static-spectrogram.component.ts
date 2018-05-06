@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AudioTrack } from '../audio-track';
-import { trackList } from '../audio-tracks';
+import { TRACKS } from '../audio-tracks';
 
 declare function StaticSpectrogram(filename, selector, options): void;
 declare function buildStaticSpectrogram(filename, selector, options): void;
@@ -12,7 +12,7 @@ declare function deleteStaticSpectrogram(): void;
   styleUrls: ['./static-spectrogram.component.css']
 })
 export class StaticSpectrogramComponent implements OnInit {
-  public tracks: AudioTrack[] = trackList;
+  public tracks: AudioTrack[] = TRACKS;
 
   constructor() { }
 

@@ -9,13 +9,13 @@ declare module '*.json' {
   export default value;
 }
 // audio recorder
-/**
+
 declare function startRecording(button): void;
 declare function stopRecording(button): void;
 declare function initialize(): void;
 declare function ExportWavBlob(): void;
 declare function clear(): void;
-**/
+
 
 // mic online -- spectrogram
 declare function init(btnMic, btnSong, select): void;
