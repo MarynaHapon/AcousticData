@@ -36,6 +36,7 @@ import { StaticSpectrogramComponent } from './static-spectrogram/static-spectrog
 import { StaticSpectrogramPageComponent } from './static-spectrogram-page/static-spectrogram-page.component';
 import { RealTimeSpectrogramPageComponent } from './real-time-spectrogram-page/real-time-spectrogram-page.component';
 import { RealTimeSpectrogramComponent } from './real-time-spectrogram/real-time-spectrogram.component';
+import { LoggerService } from './logger.service';
 
 // const appRoutes: Routes = [
 //   { path: '', component: HomeComponent },
@@ -82,7 +83,8 @@ import { RealTimeSpectrogramComponent } from './real-time-spectrogram/real-time-
     AudioPlayerComponent,
     HomeComponent,
     WindowRef,
-    AudioPlayerService
+    AudioPlayerService,
+    LoggerService
   ],
   bootstrap: [AppComponent]
 })
