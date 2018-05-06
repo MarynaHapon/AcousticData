@@ -1,6 +1,6 @@
 import { AudioTrack } from './audio-track';
 
-export const trackList: AudioTrack[] =
+export const TRACKS: AudioTrack[] =
   [
     {name: 't1', id: 0, url: '../../assets/audio/01.wav'},
     {name: 't2', id: 1, url: '../../assets/audio/02.wav'},
