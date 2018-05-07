@@ -13,12 +13,12 @@ export class AudioPlayerComponent implements OnInit, OnDestroy {
   tracks: AudioTrack[];
 
   constructor( private trackService: TrackService ) {
+    this.getTracks();
     this.trackIndex = 0;
-    // this.currentTrack = this.tracks[this.trackIndex];
+    this.currentTrack = this.tracks[this.trackIndex];
   }
   public audio: any = null;
   public playing = false;
-  // public tracks: AudioTrack[] = trackList;
   public currentTrack: AudioTrack;
   public trackIndex = 0;
   public list;
@@ -27,7 +27,6 @@ export class AudioPlayerComponent implements OnInit, OnDestroy {
   public selected;
 
   ngOnInit() {
-    this.getTracks();
     this.audio = new Audio();
   }
 
